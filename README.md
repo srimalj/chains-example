@@ -1,23 +1,19 @@
 # CHAINS-EXAMPLE
-A very simple example on using the CHAINS (https://github.com/markcox80/chains)
+CHAINS-EXAMPLE is a  very simple example on using the CHAINS (https://github.com/markcox80/chains)
 experiment chain system.
 
 As a supplement to the excellent documentation at http://markcox80.github.io/chains/
-chains-example.lisp demonstrates setting a very simple example consisting of
-a single task - a task to mutiply a set of numbers (input) by a factor (which
-is the experiment parameter).
+chains-example.lisp demonstrates a very simple example consisting of a single task.
+A task to multiply a set of numbers (input) by a factor (which is an experiment parameter).
 
-Invoking the function (run-experiments) runs the experiment with the output
-generated an experiment directory with results for each factor values as follows.
+The function (run-experiments) shows how to execute the experiment.
+Output is generated in the experiment directory.
 
-experiment/
-├── chains-root.sexp
-├── multiply-algorithm-2
-│   ├── task-object.sexp
-│   └── task-value.sexp
-├── multiply-algorithm-3
-│   ├── task-object.sexp
-│   └── task-value.sexp
-└── multiply-algorithm-4
-    ├── task-object.sexp
-    └── task-value.sexp
+Output for with each factor is stored in the sub-directories: 
+ multiply-algorithm-2 multiply-algorithm-3 multiply-algorithm-4
+
+Each sub-directory contains task-value.sexp which contains the task result, and task-object.sexp
+which contains the serialised task object.
+
+# ACKNOWLEDGEMENTS
+Thank you to Mark Cox for writing CHAINS.
